@@ -7,7 +7,7 @@ This site will add to your WEB (NOT mobile) duolingo
 Clone or download this repository as zip and go to the folder with it. Open cmd here
 
 Execute this command in cmd:
- - pip install flask flask_cors
+ - pip install flask flask_cors requests
 
 ## How to use:
 
