@@ -17,3 +17,5 @@ Execute this command in cmd:
 Open index.html in your browser, read and do instructions in this page
 
 After kvaking of duolingo close cmd and site
+
+# Repository only for informational purposes and I do not take responsibility for its use.
