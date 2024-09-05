@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvak Duolingo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Kvak of Duolingo on unlimited hearts</h1>
+    <p>This site will add to your WEB (NOT mobile) duolingo (<a href="https://www.duolingo.com/">https://www.duolingo.com/</a>) unlimited hearts.</p>
+
+    <h1>Pre-setup</h1>
+    <p>Before starting, you need to get two variables: token and user_id. To get it you need to go to the <a href="https://www.duolingo.com/">Duolingo</a>, open DevTools (by pressing F12), find Console and past this code:</p>
+
+    <pre><code id="code1">
+    document.cookie
+        .split(';')
+        .map(cookie => cookie.trim())
+        .find(cookie => cookie.includes('jwt_token'))
+        ?.split('=')[1];
+    </code></pre>
+    <button onclick="copyToClipboard('code1')">Copy</button>
+
+    <p>This is your TOKEN, please past it in field Token (without ')</p>
+    <p>Now lets get UserID, please past this code to console:</p>
+
+    <pre><code id="code2">
+    document.cookie
+        .split(';')
+        .map(cookie => cookie.trim())
+        .find(cookie => cookie.includes('logged_out_uuid'))
+        ?.split('=')[1];
+    </code></pre>
+    <button onclick="copyToClipboard('code2')">Copy</button>
+
+    <p>After this, enter received value to field User ID (without ') and press button Kvak:</p>
+
+    <input type="text" id="token" placeholder="Token">
+    <input type="text" id="userid" placeholder="User ID">
+    <button onclick="kvak()">Kvak</button>
+
+    <p id="result"></p>
+</div>
+
+<script src="script.js"></script>
+<script>
+    async function copyToClipboard(codeId) {
+        try {
+            const codeElement = document.getElementById(codeId).textContent;
+            await navigator.clipboard.writeText(codeElement);
+            alert("Copied!");
+        } catch (err) {
+            alert("Error: " + err);
+        }
+    }
+</script>
+</body>
+</html>
