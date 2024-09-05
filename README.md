@@ -1,6 +1,6 @@
 # Kvak of Duolingo on unlimited hearts
 
-This site will add to your WEB (NOT mobile) duolingo
+This site will add to your WEB (NOT mobile) duolingo unlimited hearts
 
 ## Setup
 
