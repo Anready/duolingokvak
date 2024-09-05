@@ -9,12 +9,10 @@ Clone or download this repository as zip and go to the folder with it. Open cmd 
 Execute this command in cmd:
  - pip install flask flask_cors requests
 
-## How to use:
+## How to run:
 
 Execute this command in cmd:
  - python3 server.py
-
-Open index.html in your browser, read and do instructions in this page
 
 After kvaking of duolingo close cmd and site
 
